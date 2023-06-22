@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f7f8f8;
+    width: 100%;
+    padding: 20px 10px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .1);
+}
+
+header svg {
+    width: 45px;
+}
+
+h1.h {
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 85%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 47, 53, 0.36);
+    margin: 0 auto;
+}
+
+.first {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 47, 53, 0.36);
+}
+
+.first h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.first input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.first textarea {
+    height: 100px;
+    padding: 10px;
+}
+
+.second {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 47, 53, 0.36);
+}
+
+.second h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.second input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.third {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid rgba(0, 47, 53, 0.36);
+}
+
+.third h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.third input {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.fourth {
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 47, 53, 0.36);
+}
+
+.fourth h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.fourth .holder {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fourth img {
+    width: 90px;
+}
+
+.fourth .holder input {
+    padding: 10px;
+    width: 100%;
+}
+.container button{
+    padding: 20px 30px;
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 15px 30px;
+}

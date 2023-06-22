@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell - Olx - Pakistan</title>
+    <link rel="stylesheet" href="sell.css">
+</head>
+<body>
+    <header>
+        <a href="index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1024 1024">
+                <path
+                    d="M512 124.16v54.83L209.7 473.17l676.96.05L925.48 512l-38.82 38.78H209.75L512 845.01v54.87h-56.32L85.33 539.43v-54.86l370.35-360.4H512z">
+                </path>
+            </svg></a>
+        <svg viewBox="0 0 36.289 20.768" alt="Logo" class="main-logo">
+            <path
+                d="M18.9 20.77V0h4.93v20.77zM0 10.39a8.56 8.56 0 1 1 8.56 8.56A8.56 8.56 0 0 1 0 10.4zm5.97-.01a2.6 2.6 0 1 0 2.6-2.6 2.6 2.6 0 0 0-2.6 2.6zm27 5.2l-1.88-1.87-1.87 1.88H25.9V12.3l1.9-1.9-1.9-1.89V5.18h3.27l1.92 1.92 1.93-1.92h3.27v3.33l-1.9 1.9 1.9 1.9v3.27z">
+            </path>
+        </svg>
+    </header>
+    <h1 class="h">Post you Ad</h1>
+    <div class="container">
+        <div class="first">
+        <h1>Include Some Details</h1>
+        <input type="text" id="product-name" placeholder="Product Name">
+        <textarea id="product-desc" placeholder="Description"></textarea>
+        </div>
+        <div class="second">
+            <h1>Set A Price</h1>
+            <input type="text" id="price" placeholder="Price">
+        </div>
+        <div class="third">
+            <h1>Product Photo Link</h1>
+            <input type="text" id="img-link" placeholder="Place The Link Of the Photo Here">
+        </div>
+        <div class="third">
+            <h1>Location</h1>
+            <input type="text" id="loc" placeholder="Location">
+        </div>
+        <div class="fourth">
+            <h1>Review Your Detail</h1>
+            <div class="holder">
+            <img src="https://www.olx.com.pk/assets/iconProfilePicture.7975761176487dc62e25536d9a36a61d.png">
+            <input type="text" id="user-name-sell-inp">
+            </div>
+        </div>
+        <button onclick="addProduct()">Post Now</button>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("user-name-sell-inp").value = realName.toUpperCase();
+        function addProduct() {
+            var products = []
+
+            let obj = {
+                name: document.getElementById("product-name").value,
+                description: document.getElementById("product-desc").value,
+                image: document.getElementById("img-link").value,
+                price: document.getElementById("price").value,
+                location: document.getElementById("loc").value,
+                user: document.getElementById("user-name-sell-inp").value
+            }
+            products = JSON.parse(localStorage.getItem("products")) ? JSON.parse(localStorage.getItem(
+                "products")) : []
+            products.push(obj)
+            localStorage.setItem("products", JSON.stringify(products));
+
+            window.location.href = "index.html"
+        }
+    </script>
+</body>
+</html>
